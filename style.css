@@ -1346,7 +1346,7 @@ body {
 .site-footer {
     background-color: #111111;
     color: var(--color-white);
-    padding: 6rem 0 2rem 0;
+    padding: 4rem 0 1rem 0;
 }
 
 .footer-container {
@@ -1357,10 +1357,10 @@ body {
 .footer-top {
     display: grid;
     grid-template-columns: 2fr 1.5fr 1.5fr;
-    gap: 4rem;
-    margin-bottom: 4rem;
+    gap: 3rem;
+    margin-bottom: 3rem;
     border-bottom: 1px solid rgba(255,255,255,0.1);
-    padding-bottom: 4rem;
+    padding-bottom: 3rem;
 }
 
 .footer-logo {
