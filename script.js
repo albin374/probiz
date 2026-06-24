@@ -88,4 +88,31 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Scroll to Top Button Implementation
+    let scrollTopBtn = document.getElementById('scrollTopBtn');
+    
+    if (!scrollTopBtn) {
+        scrollTopBtn = document.createElement('button');
+        scrollTopBtn.id = 'scrollTopBtn';
+        scrollTopBtn.className = 'scroll-to-top';
+        scrollTopBtn.setAttribute('aria-label', 'Scroll to top');
+        scrollTopBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>';
+        document.body.appendChild(scrollTopBtn);
+    }
+
+    scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            scrollTopBtn.classList.add('show');
+        } else {
+            scrollTopBtn.classList.remove('show');
+        }
+    });
 });
