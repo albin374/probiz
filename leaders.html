@@ -61,6 +61,13 @@
             padding: 4rem 0 6rem;
             position: relative;
         }
+        .hero-title {
+            font-size: 5rem;
+        }
+        .hero-desc-container {
+            justify-content: flex-end;
+            margin-top: -3rem;
+        }
 
         .vertical-text {
             position: absolute;
@@ -186,8 +193,20 @@
                 font-size: 20rem;
                 top: 0;
             }
+            .hero-title {
+                font-size: 3rem;
+            }
+            .hero-desc-container {
+                justify-content: flex-start;
+                margin-top: 2rem;
+            }
             .vertical-text {
                 display: none;
+            }
+        }
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2.5rem;
             }
         }
     </style>
@@ -222,7 +241,7 @@
             <div class="container" style="position: relative; z-index: 1;">
                 <div style="max-width: 800px;">
                     <h4 style="color: var(--color-orange); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2rem; font-weight: 700;">Meet the Team</h4>
-                    <h1 style="font-family: var(--font-heading); font-size: 5rem; line-height: 1; margin-bottom: 0.5rem; font-weight: 800;">
+                    <h1 class="hero-title" style="font-family: var(--font-heading); line-height: 1; margin-bottom: 0.5rem; font-weight: 800;">
                         Led by<br>
                         <span class="outline-text">EXPERIENCE</span>.<br>
                         Driven by<br>
@@ -230,7 +249,7 @@
                     </h1>
                 </div>
 
-                <div style="display: flex; justify-content: flex-end; margin-top: -3rem; position: relative; z-index: 2;">
+                <div class="hero-desc-container" style="display: flex; position: relative; z-index: 2;">
                     <div style="max-width: 400px; border-left: 2px solid #111; padding-left: 2rem;">
                         <p style="font-size: 0.95rem; color: #555; line-height: 1.6;">
                             ProBiz Knowledge Center is led by professionals who have not just studied organizational development and business excellence, but have lived it across industries and geographies.

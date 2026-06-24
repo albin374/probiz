@@ -28,6 +28,21 @@
         .impact-page-stats .stat-number {
             color: var(--color-orange);
         }
+        .stats-grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+        @media (max-width: 992px) {
+            .stats-grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .stats-grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -69,9 +84,9 @@
                 <p style="font-size: 1rem; line-height: 1.8; color: #555; margin-bottom: 1rem;">At ProBiz, our philosophy is anchored in deep active listening and radical collaboration. We don't just provide recommendations; we co-design bespoke solutions alongside your leadership teams. By blending our multi-decade expertise with your unique organizational context, we ensure that every strategy is not only ambitious but execution-ready, driving tangible value from day one.</p>
             </div>
             <div style="flex: 1; min-width: 300px; display: flex; justify-content: center;">
-                <div style="width: 100%; max-width: 500px; aspect-ratio: 1 / 0.85; border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 2px solid #fdf5f1; display: flex; flex-direction: column; background-color: white;">
-                    <img src="assets/images/empty_boardroom_city.png" alt="Strategy and Innovation" style="width: 100%; height: 75%; object-fit: cover;">
-                    <div style="height: 25%; display: flex; flex-direction: column; justify-content: center; padding: 0 2rem;">
+                <div style="width: 100%; max-width: 500px; border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 2px solid #fdf5f1; display: flex; flex-direction: column; background-color: white;">
+                    <img src="assets/images/empty_boardroom_city.png" alt="Strategy and Innovation" style="width: 100%; aspect-ratio: 16/9; object-fit: cover;">
+                    <div style="padding: 1.5rem 2rem; display: flex; flex-direction: column; justify-content: center;">
                         <h4 style="font-family: var(--font-heading); font-size: 1.2rem; color: #222; margin-bottom: 0.2rem; font-weight: 700;">STRATEGY <span style="color: var(--color-orange);">&</span> INNOVATION PARTNERS</h4>
                         <p style="font-size: 0.75rem; color: #999; text-transform: uppercase; letter-spacing: 1px; margin: 0; font-weight: 600;">CONSULTING FIRM</p>
                     </div>
@@ -82,7 +97,7 @@
 
     <section class="impact-stats-section" style="background-color: #f5f5f5; padding: 6rem 0 3rem;">
         <div style="width: 95%; max-width: 1600px; margin: 0 auto;">
-            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;">
+            <div class="stats-grid-container">
                 <div style="background: white; padding: 3rem 2rem; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: left;">
                     <h3 style="font-size: 3rem; font-family: var(--font-heading); color: var(--color-orange); margin-bottom: 1rem; font-weight: 800;">12+</h3>
                     <p style="font-size: 0.75rem; font-weight: 800; color: var(--color-black); text-transform: uppercase; letter-spacing: 1px; line-height: 1.4;">INDUSTRIES SERVED<br>ACROSS INDIA AND THE<br>GCC</p>
