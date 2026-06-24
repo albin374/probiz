@@ -25,6 +25,10 @@ body {
     overflow-x: hidden;
 }
 
+p {
+    text-align: justify;
+}
+
 /* Container */
 .container {
     width: 100%;
@@ -1675,6 +1679,12 @@ body {
 }
 
 @media (max-width: 768px) {
+    .service-detail-section {
+        padding: 2.5rem 0;
+    }
+    .service-detail-grid {
+        gap: 2rem;
+    }
     .industries-grid {
         grid-template-columns: 1fr;
     }
@@ -1696,10 +1706,18 @@ body {
         font-size: 2.8rem;
         letter-spacing: -1px;
     }
+    .card-bg-number {
+        font-size: 5rem;
+    }
 }
 
 @media (max-width: 480px) {
     .hero-headline {
         font-size: 2.2rem;
+    }
+    .card-bg-number {
+        font-size: 4rem;
+        top: 1rem;
+        right: 1rem;
     }
 }
