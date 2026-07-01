@@ -1,5 +1,5 @@
 import React from 'react';
-import ElectricBorder from '../components/ElectricBorder';
+
 
 const Services = () => {
     return (
@@ -27,7 +27,7 @@ const Services = () => {
         <div className="container">
             <div className="service-detail-grid">
                 <div className="service-detail-image">
-                    <ElectricBorder color="#d35400" style={{ borderRadius: 8 }}><img src="assets/images/r4.jpeg" alt="Organizational Development" className="service-img" style={{ display: "block" }} /></ElectricBorder>
+                    <img src="assets/images/r4.jpeg" alt="Organizational Development" className="service-img" style={{ display: "block", borderRadius: 8 }} />
                 </div>
                 <div className="service-detail-content">
                     <h2 style={{ color: "var(--color-orange)" }}>Organizational Development</h2>
@@ -58,7 +58,7 @@ const Services = () => {
         <div className="container">
             <div className="service-detail-grid reverse-layout">
                 <div className="service-detail-image">
-                    <ElectricBorder color="#d35400" style={{ borderRadius: 8 }}><img src="assets/images/img6.jpeg" alt="Business Excellence" className="service-img" style={{ display: "block" }} /></ElectricBorder>
+                    <img src="assets/images/img6.jpeg" alt="Business Excellence" className="service-img" style={{ display: "block", borderRadius: 8 }} />
                 </div>
                 <div className="service-detail-content">
                     <h2 style={{ color: "var(--color-orange)" }}>Business Excellence</h2>
@@ -140,7 +140,7 @@ const Services = () => {
         <div className="container">
             <div className="service-detail-grid">
                 <div className="service-detail-image">
-                    <ElectricBorder color="#d35400" style={{ borderRadius: 8, height: "100%" }}><img src="assets/images/exp.jpeg" alt="Experiential Learning" className="service-img" style={{ display: "block", height: "100%" }} /></ElectricBorder>
+                    <img src="assets/images/exp.jpeg" alt="Experiential Learning" className="service-img" style={{ display: "block", height: "100%", borderRadius: 8 }} />
                     <div className="impact-overlay-box">
                         <h3>Impact</h3>
                         <p>Beyond the classroom learning models.</p>
