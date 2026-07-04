@@ -21,6 +21,10 @@ const DecayCard = ({
   const winsize = useRef({ width: window.innerWidth, height: window.innerHeight });
 
   useEffect(() => {
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      return;
+    }
+
     const lerp = (a, b, n) => (1 - n) * a + n * b;
 
     const map = (x, a, b, c, d) => ((x - a) * (d - c)) / (b - a) + c;
@@ -132,10 +136,10 @@ const DecayCard = ({
         <g>
           <image
             href={image}
-            x="0"
-            y="0"
-            width="600"
-            height="750"
+            x="-60"
+            y="-75"
+            width="720"
+            height="900"
             filter="url(#imgFilter)"
             preserveAspectRatio="xMidYMid slice"
           />

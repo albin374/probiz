@@ -87,12 +87,12 @@ const Learning = () => {
             <p style={{ color: "#666", fontSize: "1.1rem", maxWidth: "800px", margin: "0 auto" }}>Research consistently shows that active participation leads to significantly higher knowledge retention compared to passive learning.</p>
             
             <div className="gap-grid" style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                <DecayCard width={450} height={350} image="assets/images/r1.jpeg">
+                <DecayCard width={450} height={350} image="assets/images/sir.jpeg">
                     <h3 style={{ color: "var(--color-orange)", fontSize: "3rem", marginBottom: "0.5rem", fontWeight: "800" }}>75% <span style={{ fontSize: "1.2rem", color: "#fff", fontWeight: "bold" }}>Retention</span></h3>
                     <h4 style={{ fontSize: "1.5rem", marginBottom: "1rem", fontWeight: "700" }}>Active Debating & Roleplay</h4>
                     <p style={{ fontSize: "1rem", lineHeight: "1.5" }}>When students participate in simulations, they internalize concepts by applying them. This active involvement maximizes engagement and embeds knowledge in long-term memory.</p>
                 </DecayCard>
-                <DecayCard width={450} height={350} image="assets/images/r2.jpeg">
+                <DecayCard width={450} height={350} image="assets/images/img3.JPEG">
                     <h3 style={{ color: "#bbb", fontSize: "3rem", marginBottom: "0.5rem", fontWeight: "800" }}>10% <span style={{ fontSize: "1.2rem", color: "#fff", fontWeight: "bold" }}>Retention</span></h3>
                     <h4 style={{ fontSize: "1.5rem", marginBottom: "1rem", fontWeight: "700" }}>Traditional Lecture Learning</h4>
                     <p style={{ fontSize: "1rem", lineHeight: "1.5" }}>Passive listening results in rapid cognitive decay. Without immediate application, most theoretical knowledge is lost within days of the lecture.</p>
@@ -243,10 +243,7 @@ const Learning = () => {
             
             <div style={{ position: "relative" }}>
                 <img src="assets/images/r2.jpeg" alt="Model UN Session" style={{ width: "100%", height: "500px", objectFit: "cover", borderRadius: "8px", boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }} />
-                <div style={{ position: "absolute", bottom: "30px", left: "-30px", backgroundColor: "var(--color-orange)", color: "#fff", padding: "2rem", borderRadius: "4px", boxShadow: "0 10px 30px rgba(211, 84, 0, 0.3)", maxWidth: "200px" }}>
-                    <h4 style={{ fontFamily: "var(--font-heading)", fontSize: "1.5rem", fontWeight: "800", marginBottom: "0.5rem", lineHeight: "1.2" }}>100+</h4>
-                    <p style={{ fontSize: "0.9rem", margin: "0", lineHeight: "1.4" }}>Schools Impacted In India</p>
-                </div>
+                
             </div>
         </div>
     </section>
