@@ -1,4 +1,50 @@
 import React from 'react';
+import SplitText from '../components/SplitText';
+import CircularText from '../components/CircularText';
+import TextType from '../components/TextType';
+
+import MagicBento from '../components/MagicBento';
+
+const svg1 = <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-orange)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21h18"></path><path d="M9 8h1"></path><path d="M9 12h1"></path><path d="M9 16h1"></path><path d="M14 8h1"></path><path d="M14 12h1"></path><path d="M14 16h1"></path><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"></path></svg>;
+const svg2 = <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-orange)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>;
+const svg3 = <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-orange)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"></path><path d="M12 12 2.1 7.1"></path><path d="M12 12l9.9 4.9"></path></svg>;
+
+const serviceCards = [
+  {
+    color: '#120F17',
+    customClass: 'card-wide-left',
+    title: 'Organizational Development',
+    description: 'Aligning people, processes, and leadership to create resilient, high-performing organizations that drive sustainable growth and long-term success.',
+    label: '01',
+    icon: svg1,
+    link: { text: 'Get Started \u2192', url: 'services.html' }
+  },
+  {
+    color: '#120F17',
+    customClass: 'card-narrow-right',
+    title: 'Business Excellence',
+    description: 'Driving continuous improvement through strategic alignment, operational excellence, and performance-focused frameworks that enable sustainable growth and lasting business success.',
+    label: '02',
+    icon: svg2,
+    link: { text: 'Learn More \u2192', url: 'services.html' }
+  },
+  {
+    color: '#120F17',
+    customClass: 'card-narrow-left',
+    title: 'Experiential Learning',
+    description: 'Transformative training programs that prioritize hands-on experience and behavioral change over theory.',
+    label: '03',
+    icon: svg3,
+    link: { text: 'Our Approach \u2192', url: 'learning.html' }
+  },
+  {
+    color: 'var(--color-orange)',
+    customClass: 'card-wide-right orange-card',
+    title: 'Ready for a custom strategy?',
+    description: 'Our experts are available for a 30-minute consultation to map out your organization\'s unique challenges.',
+    link: { text: 'CONTACT US', url: 'contact.html' }
+  }
+];
 
 const Index = () => {
     return (
@@ -12,10 +58,17 @@ const Index = () => {
         
         <div className="container hero-container">
             <div className="hero-content">
-                <h1 className="hero-headline">
-                    <span className="desktop-nowrap">Transforming Businesses.</span><br />
-                    Empowering People.<br />
-                    Delivering <span className="highlight italic">Excellence.</span>
+                <h1 className="hero-headline" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+                    <span className="desktop-nowrap" style={{ display: 'inline-flex', whiteSpace: 'nowrap' }}>
+                        <SplitText tag="span" text="Transforming Businesses." delay={30} textAlign="left" />
+                    </span>
+                    <span style={{ display: 'inline-flex', whiteSpace: 'nowrap' }}>
+                        <SplitText tag="span" text="Empowering People." delay={30} textAlign="left" />
+                    </span>
+                    <span style={{ display: 'inline-flex', gap: '8px', whiteSpace: 'nowrap' }}>
+                        <SplitText tag="span" text="Delivering" delay={30} textAlign="left" />
+                        <SplitText tag="span" text="Excellence." delay={30} className="highlight italic" textAlign="left" />
+                    </span>
                 </h1>
                 <p className="hero-subheadline">
                     Bridging global strategy and local agility. As your boutique consultancy partner, we drive sustainable growth through people-centric excellence.
@@ -74,12 +127,27 @@ const Index = () => {
             
             <div className="about-content-column">
                 <h4 className="section-eyebrow">WHO WE ARE</h4>
-                <h2 className="section-heading">A Different Kind of Consulting Partner</h2>
+                <h2 className="section-heading">
+                    <TextType 
+                        text="A Different Kind of Consulting Partner"
+                        typingSpeed={50}
+                        loop={false}
+                        showCursor={false}
+                        as="span"
+                        startOnVisible={true}
+                    />
+                </h2>
                 
-                <div className="about-text">
-                    <p>ProBiz Knowledge Center was founded on a simple belief: real change does not happen through slide decks delivered and forgotten. It happens when consultants roll up their sleeves alongside their clients and work through every challenge together.</p>
-                    <p>We are a Trivandrum-based consulting practice with deep roots in organizational development and a growing footprint in business excellence and experiential learning. Drawing on lateral thinking methodologies and cross-cultural expertise across India and the GCC region, we bring a perspective that is both globally informed and locally grounded.</p>
-                    <p>When you engage ProBiz, we do not arrive with a generic playbook. We take time to understand your business, your people and your systems before we co-design solutions with you. Our goal is to leave your organization stronger, more agile and fully equipped to continue growing without us.</p>
+                <div className="about-text" style={{ minHeight: '350px' }}>
+                    <TextType 
+                        text={`ProBiz Knowledge Center was founded on a simple belief: real change does not happen through slide decks delivered and forgotten. It happens when consultants roll up their sleeves alongside their clients and work through every challenge together.\n\nWe are a Trivandrum-based consulting practice with deep roots in organizational development and a growing footprint in business excellence and experiential learning. Drawing on lateral thinking methodologies and cross-cultural expertise across India and the GCC region, we bring a perspective that is both globally informed and locally grounded.\n\nWhen you engage ProBiz, we do not arrive with a generic playbook. We take time to understand your business, your people and your systems before we co-design solutions with you. Our goal is to leave your organization stronger, more agile and fully equipped to continue growing without us.`}
+                        typingSpeed={15}
+                        loop={false}
+                        showCursor={false}
+                        hideCursorWhileTyping={false}
+                        as="p"
+                        startOnVisible={true}
+                    />
                 </div>
             </div>
         </div>
@@ -123,46 +191,20 @@ const Index = () => {
                 </div>
             </div>
 
-            <div className="services-grid">
-                {/*  Card 1  */}
-                <div className="service-card dark-card card-wide-left hover-3d">
-                    <div className="card-bg-number">01</div>
-                    <div className="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-orange)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21h18"></path><path d="M9 8h1"></path><path d="M9 12h1"></path><path d="M9 16h1"></path><path d="M14 8h1"></path><path d="M14 12h1"></path><path d="M14 16h1"></path><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"></path></svg>
-                    </div>
-                    <h3>Organizational Development</h3>
-                    <p>Aligning people, processes, and leadership to create resilient, high-performing organizations that drive sustainable growth and long-term success.</p>
-                    <a href="services.html" className="service-link">Get Started &rarr;</a>
-                </div>
-
-                {/*  Card 2  */}
-                <div className="service-card dark-card card-narrow-right hover-3d">
-                    <div className="card-bg-number">02</div>
-                    <div className="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-orange)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-                    </div>
-                    <h3>Business Excellence</h3>
-                    <p>Driving continuous improvement through strategic alignment, operational excellence, and performance-focused frameworks that enable sustainable growth and lasting business success.</p>
-                    <a href="services.html" className="service-link">Learn More &rarr;</a>
-                </div>
-
-                {/*  Card 3  */}
-                <div className="service-card dark-card card-narrow-left hover-3d">
-                    <div className="card-bg-number">03</div>
-                    <div className="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-orange)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"></path><path d="M12 12 2.1 7.1"></path><path d="M12 12l9.9 4.9"></path></svg>
-                    </div>
-                    <h3>Experiential Learning</h3>
-                    <p>Transformative training programs that prioritize hands-on experience and behavioral change over theory.</p>
-                    <a href="learning.html" className="service-link">Our Approach &rarr;</a>
-                </div>
-
-                {/*  Card 4 CTA  */}
-                <div className="service-card orange-card card-wide-right hover-3d">
-                    <h3>Ready for a custom strategy?</h3>
-                    <p>Our experts are available for a 30-minute consultation to map out your organization's unique challenges.</p>
-                    <a href="contact.html" className="btn btn-black">CONTACT US</a>
-                </div>
+            <div className="services-grid" style={{ display: 'block', padding: '0', maxWidth: '100%' }}>
+                <MagicBento 
+                    cards={serviceCards}
+                    textAutoHide={false}
+                    enableStars={true}
+                    enableSpotlight={true}
+                    enableBorderGlow={true}
+                    enableTilt={true}
+                    enableMagnetism={true}
+                    clickEffect={true}
+                    spotlightRadius={400}
+                    particleCount={12}
+                    glowColor="255, 122, 0"
+                />
             </div>
         </div>
     </section>
@@ -225,7 +267,17 @@ const Index = () => {
         <div className="container impact-container">
             <div className="impact-top">
                 <div className="impact-content">
-                    <h4 className="section-eyebrow">The ProBiz Approach</h4>
+                    <div style={{ position: 'relative', display: 'inline-block', width: '100%' }}>
+
+                        <div style={{ position: 'absolute', right: '0', top: '-60px', zIndex: 10 }} className="desktop-only">
+                            <CircularText
+                                text="* THE * PROBIZ * APPROACH "
+                                onHover="speedUp"
+                                spinDuration={20}
+                                className=""
+                            />
+                        </div>
+                    </div>
                     <h2 className="section-heading">We Partner. We Execute. <span style={{ whiteSpace: "nowrap" }}>We Deliver.</span></h2>
                     <div className="impact-text">
                         <p>Our approach is built on a straightforward philosophy: your people and your systems are your greatest assets. Every ProBiz engagement begins with listening, not prescribing.</p>
@@ -281,7 +333,7 @@ const Index = () => {
                     <div className="leader-badge right-badge">★</div>
                 </div>
                 <div className="leader-profile-content">
-                    <h3 className="leader-name">Rajit Karunakaran</h3>
+                    <TextType as="h3" className="leader-name" text="Rajit Karunakaran" loop={false} startOnVisible={true} showCursor={false} />
                     <h5 className="leader-title">FOUNDER & CEO, PROBIZ KNOWLEDGE CENTER</h5>
                     <div className="leader-short-bio">
                         <p>Rajit is a seasoned organizational development consultant with over 32 years of experience across Asia and the Middle East. He has successfully led large-scale transformation projects for Fortune 500 companies, focusing on leadership alignment and operational excellence.</p>
@@ -303,7 +355,7 @@ const Index = () => {
                     <div className="leader-badge left-badge">⚡</div>
                 </div>
                 <div className="leader-profile-content">
-                    <h3 className="leader-name">Abhav R Nair</h3>
+                    <TextType as="h3" className="leader-name" text="Abhav R Nair" loop={false} startOnVisible={true} showCursor={false} />
                     <h5 className="leader-title">CHIEF OPERATING OFFICER, PROBIZ KNOWLEDGE CENTER</h5>
                     <div className="leader-short-bio">
                         <p>Abhav brings a wealth of operational expertise to ProBiz, specializing in scaling business engagements and managing complex delivery frameworks. With a background in business excellence and strategic operations, he ensures that ProBiz's internal systems are as robust and efficient as the solutions provided to clients.</p>
