@@ -30,5 +30,13 @@
   .content {
     width: 100% !important;
     max-width: 450px !important;
+    height: auto !important;
+    min-height: 400px !important;
+  }
+  .card-text {
+    padding: 1.5rem !important;
+    position: relative;
+    min-height: 400px;
+    justify-content: flex-end;
   }
 }
