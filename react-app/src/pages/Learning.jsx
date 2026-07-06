@@ -1242,10 +1242,10 @@ const Learning = () => {
             gap: 1.5rem;
             margin-top: 2rem;
         }
-        .mun-feature { display: flex; gap: 1rem; align-items: flex-start; }
+        .mun-feature { display: grid; grid-template-columns: 140px 1fr; gap: 1rem; align-items: flex-start; }
         .mun-feature svg { color: var(--color-orange); flex-shrink: 0; margin-top: 0.2rem; }
-        .mun-feature h5 { font-size: 0.95rem; color: #fff; margin-bottom: 0.3rem; }
-        .mun-feature p { font-size: 0.8rem; color: #aaa; margin: 0; line-height: 1.4; }
+        .mun-feature h5 { font-size: 1rem; color: #111; margin-bottom: 0.3rem; margin-top: 0; }
+        .mun-feature p { font-size: 0.85rem; color: #666; margin: 0; line-height: 1.5; }
         
         /* Debate */
         .debate-grid {
@@ -1414,10 +1414,17 @@ const Learning = () => {
                                 color: #000;
                                 opacity: 1;
                             }
+                            .guide-modal-input:-webkit-autofill,
+                            .guide-modal-input:-webkit-autofill:hover, 
+                            .guide-modal-input:-webkit-autofill:focus, 
+                            .guide-modal-input:-webkit-autofill:active{
+                                -webkit-box-shadow: 0 0 0 30px white inset !important;
+                                -webkit-text-fill-color: #000 !important;
+                            }
                         `}</style>
                         <form onSubmit={handleGuideSubmit} style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-                            <input type="text" className="guide-modal-input" placeholder="Your Name" required value={guideForm.name} onChange={(e) => setGuideForm({...guideForm, name: e.target.value})} style={{ padding: "0.8rem", border: "1px solid #ddd", borderRadius: "4px", backgroundColor: "#fff", color: "#000" }} />
-                            <input type="email" className="guide-modal-input" placeholder="Your Email" required value={guideForm.email} onChange={(e) => setGuideForm({...guideForm, email: e.target.value})} style={{ padding: "0.8rem", border: "1px solid #ddd", borderRadius: "4px", backgroundColor: "#fff", color: "#000" }} />
+                            <input type="text" className="guide-modal-input" placeholder="Name" required value={guideForm.name} onChange={(e) => setGuideForm({...guideForm, name: e.target.value})} style={{ padding: "0.8rem", border: "1px solid #ddd", borderRadius: "4px", backgroundColor: "#fff", color: "#000" }} />
+                            <input type="email" className="guide-modal-input" placeholder="Email" required value={guideForm.email} onChange={(e) => setGuideForm({...guideForm, email: e.target.value})} style={{ padding: "0.8rem", border: "1px solid #ddd", borderRadius: "4px", backgroundColor: "#fff", color: "#000" }} />
                             <button type="submit" style={{ backgroundColor: "var(--color-orange)", color: "#fff", padding: "1rem", border: "none", borderRadius: "4px", fontWeight: "700", cursor: "pointer" }}>Submit & Download</button>
                         </form>
                     </div>
