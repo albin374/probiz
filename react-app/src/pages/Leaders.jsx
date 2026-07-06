@@ -75,6 +75,7 @@ const Leaders = () => {
                 </div>
                 
                 <div className="leader-content">
+                    <img src="assets/images/img11.jpeg" alt="Rajit Karunakaran" className="mobile-only" style={{ width: "100%", marginBottom: "1.5rem", borderRadius: "8px" }} />
                     <h4 style={{ color: "var(--color-orange)", fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "0.5rem", fontWeight: "700" }}>EXECUTIVE LEADERSHIP</h4>
                     <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "2.5rem", marginBottom: "1.5rem", fontWeight: "800", lineHeight: "1.1" }}>Rajit Karunakaran</h2>
                     
@@ -95,7 +96,6 @@ const Leaders = () => {
                     </div>
 
                     <div className="bio-details" style={{ paddingRight: "1rem", borderTop: "1px solid #eee" }}>
-                        <img src="assets/images/img11.jpeg" alt="Rajit Karunakaran" className="mobile-only" style={{ width: "100%", marginTop: "1.5rem", borderRadius: "8px" }} />
                         <h4 style={{ fontSize: "0.8rem", color: "var(--color-orange)", textTransform: "uppercase", letterSpacing: "1px", fontWeight: "700", margin: "1.5rem 0 0.8rem" }}>Background in Organizational Development & Consulting</h4>
                         <ul style={{ listStyle: "none", padding: "0", margin: "0 0 1.5rem" }}>
                             <li style={{ fontSize: "0.9rem", color: "#555", marginBottom: "0.6rem", paddingLeft: "1.2rem", position: "relative", lineHeight: "1.5" }}><span style={{ color: "var(--color-orange)", position: "absolute", left: "0" }}>▪</span> Over 32 years of experience in management consulting, organizational development, and business transformation.</li>
@@ -154,6 +154,7 @@ const Leaders = () => {
             {/*  Abhav Section  */}
             <div id="abhav" className="leader-section reverse" style={{ marginBottom: "0", paddingBottom: "6rem" }}>
                 <div className="leader-content">
+                    <img src="assets/images/img12.PNG" alt="Abhav R Nair" className="mobile-only" style={{ width: "100%", marginBottom: "1.5rem", borderRadius: "8px" }} />
                     <h4 style={{ color: "var(--color-orange)", fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "0.5rem", fontWeight: "700" }}>OPERATIONAL EXCELLENCE</h4>
                     <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "2.5rem", marginBottom: "2rem", fontWeight: "800", lineHeight: "1.1" }}>Abhav R Nair</h2>
                     
@@ -174,7 +175,6 @@ const Leaders = () => {
                     </div>
 
                     <div className="bio-details" style={{ paddingRight: "1rem", borderTop: "1px solid #eee" }}>
-                        <img src="assets/images/img12.PNG" alt="Abhav R Nair" className="mobile-only" style={{ width: "100%", marginTop: "1.5rem", borderRadius: "8px", marginBottom: "1rem" }} />
                         <h4 style={{ fontSize: "0.8rem", color: "var(--color-orange)", textTransform: "uppercase", letterSpacing: "1px", fontWeight: "700", margin: "1.5rem 0 0.8rem" }}>Background in Organizational Leadership & Experiential Learning</h4>
                         <ul style={{ listStyle: "none", padding: "0", margin: "0 0 1.5rem" }}>
                             <li style={{ fontSize: "0.9rem", color: "#555", marginBottom: "0.6rem", paddingLeft: "1.2rem", position: "relative", lineHeight: "1.5" }}><span style={{ color: "var(--color-orange)", position: "absolute", left: "0" }}>▪</span> Chief Operating Officer, ProBiz Knowledge Center</li>
