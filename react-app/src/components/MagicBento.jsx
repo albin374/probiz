@@ -1,5 +1,6 @@
 import { useRef, useEffect, useCallback, useState } from 'react';
 import { gsap } from 'gsap';
+import { Link } from 'react-router-dom';
 import './MagicBento.css';
 
 const DEFAULT_PARTICLE_COUNT = 12;
@@ -482,12 +483,12 @@ const MagicBento = ({
                 <h3 className="magic-bento-card__title">{card.title}</h3>
                 <p className="magic-bento-card__description">{card.description}</p>
                 {card.link && (
-                  <a 
-                    href={card.link.url} 
+                  <Link 
+                    to={card.link.url} 
                     className={card.customClass?.includes('orange-card') ? 'btn btn-black' : 'service-link'}
                   >
                     {card.link.text}
-                  </a>
+                  </Link>
                 )}
               </div>
             </>

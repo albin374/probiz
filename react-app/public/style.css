@@ -1715,8 +1715,13 @@ body {
         white-space: normal;
     }
     .hero-headline {
-        font-size: 2.8rem;
+        font-size: 2.4rem;
         letter-spacing: -1px;
+    }
+    .hero-subheadline {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        max-width: 100%;
     }
     .card-bg-number {
         font-size: 5rem;
@@ -1725,7 +1730,10 @@ body {
 
 @media (max-width: 480px) {
     .hero-headline {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
+    }
+    .hero-subheadline {
+        font-size: 0.85rem;
     }
     .mobile-shift-left {
         margin-left: -0.5rem;

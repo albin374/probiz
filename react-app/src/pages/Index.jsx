@@ -59,13 +59,13 @@ const Index = () => {
         <div className="container hero-container">
             <div className="hero-content">
                 <h1 className="hero-headline" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-                    <span className="desktop-nowrap mobile-shift-left" style={{ display: 'inline-flex', whiteSpace: 'nowrap' }}>
+                    <span className="desktop-nowrap mobile-shift-left" style={{ display: 'inline-flex' }}>
                         <SplitText tag="span" text="Transforming Businesses." delay={30} textAlign="left" />
                     </span>
-                    <span style={{ display: 'inline-flex', whiteSpace: 'nowrap' }}>
+                    <span className="desktop-nowrap" style={{ display: 'inline-flex' }}>
                         <SplitText tag="span" text="Empowering People." delay={30} textAlign="left" />
                     </span>
-                    <span style={{ display: 'inline-flex', gap: '8px', whiteSpace: 'nowrap' }}>
+                    <span className="desktop-nowrap" style={{ display: 'inline-flex', gap: '8px' }}>
                         <SplitText tag="span" text="Delivering" delay={30} textAlign="left" />
                         <SplitText tag="span" text="Excellence." delay={30} className="highlight italic" textAlign="left" />
                     </span>
