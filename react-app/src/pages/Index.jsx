@@ -59,7 +59,7 @@ const Index = () => {
         <div className="container hero-container">
             <div className="hero-content">
                 <h1 className="hero-headline" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-                    <span className="desktop-nowrap mobile-shift-left" style={{ display: 'inline-flex' }}>
+                    <span className="desktop-nowrap" style={{ display: 'inline-flex', marginLeft: '-0.06em' }}>
                         <SplitText tag="span" text="Transforming Businesses." delay={30} textAlign="left" />
                     </span>
                     <span className="desktop-nowrap" style={{ display: 'inline-flex' }}>
